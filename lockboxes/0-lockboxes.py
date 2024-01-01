@@ -15,4 +15,4 @@ def canUnlockAll(boxes):
             if key < limit and key in second_temp:
                 temp.append(key)
 
-    return len(second_temp) == 0
+    return not second_temp
