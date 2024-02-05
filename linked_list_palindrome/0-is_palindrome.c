@@ -18,9 +18,18 @@ int is_palindrome(listint_t **head)
     if (head == NULL)
         return 1;
 
-    newArray = malloc(sizeof(listint_t));
+    listint_t* temp = *head;
+    while (temp)
+    {
+        temp = temp->next;
+        i++;
+    }
+
+    newArray = malloc(i * sizeof(listint_t));
     if (newArray == NULL)
         free(newArray);
+
+    i = 0;
 
     while (*head)
     {
