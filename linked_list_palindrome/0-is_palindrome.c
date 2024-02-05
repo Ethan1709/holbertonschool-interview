@@ -10,7 +10,6 @@
 
 int is_palindrome(listint_t **head)
 {
-    listint_t *temp = *head;
     int *newArray;
     int i = 0;
     int j = 0;
@@ -19,17 +18,9 @@ int is_palindrome(listint_t **head)
     if (head == NULL)
         return 1;
 
-    while (temp)
-    {
-        temp = temp->next;
-        i++;
-    }
-
-    newArray = malloc(sizeof(144));
+    newArray = malloc(sizeof(int));
     if (newArray == NULL)
         free(newArray);
-
-    i = 0;
 
     while (*head)
     {
