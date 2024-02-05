@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
         i++;
     }
 
-    newArray = malloc((i + 1) * sizeof(int));
+    newArray = malloc(sizeof(i));
     if (newArray == NULL)
         free(newArray);
 
