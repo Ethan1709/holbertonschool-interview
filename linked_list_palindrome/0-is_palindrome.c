@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
     if (head == NULL)
         return 1;
 
-    listint_t* temp = *head;
+    listint_t *temp = *head;
     while (temp)
     {
         temp = temp->next;
