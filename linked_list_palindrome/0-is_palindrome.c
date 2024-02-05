@@ -10,6 +10,7 @@
 
 int is_palindrome(listint_t **head)
 {
+    listint_t *temp = *head;
     int *newArray;
     int i = 0;
     int j = 0;
@@ -18,7 +19,6 @@ int is_palindrome(listint_t **head)
     if (head == NULL)
         return 1;
 
-    listint_t *temp = *head;
     while (temp)
     {
         temp = temp->next;
