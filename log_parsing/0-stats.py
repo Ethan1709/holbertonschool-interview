@@ -16,7 +16,6 @@ def print_stats(total_size, my_dict):
         print("{}: {}".format(key, my_dict[key]))
 
 
-
 try:
     for line in sys.stdin:
         line_split = line.split()
@@ -26,7 +25,7 @@ try:
             total_size += int(file_size)
         except (IndexError, ValueError):
             pass
-        
+
         try:
             status_code = line_split[7]
             if status_code in status_available:
@@ -42,7 +41,7 @@ try:
         if i == 10:
             print_stats(total_size, my_dict)
             i = 0
-    
+
     print_stats(total_size, my_dict)
 
 except KeyboardInterrupt:
