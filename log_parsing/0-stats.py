@@ -28,3 +28,9 @@ for line in stdin:
         my_dict = {}
         i = 0
 
+print(f'File size: {total_size}')
+my_dict = sorted(my_dict.items())
+my_dict = dict(my_dict)
+for key in my_dict:
+    print(f'{key}: {len(my_dict[key])}')
+   
