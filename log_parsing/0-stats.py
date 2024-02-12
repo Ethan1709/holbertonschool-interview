@@ -21,13 +21,13 @@ try:
         line_split = line.split()
 
         try:
-            file_size = line_split[8]
+            file_size = line_split[-1]
             total_size += int(file_size)
         except (IndexError, ValueError):
             pass
 
         try:
-            status_code = line_split[7]
+            status_code = line_split[-2]
             if status_code in status_available:
                 if status_code in my_dict:
                     my_dict[status_code] += 1
@@ -40,7 +40,7 @@ try:
 
         if i == 10:
             print_stats(total_size, my_dict)
-            i = 0
+            i = 1
 
     print_stats(total_size, my_dict)
 
