@@ -13,15 +13,24 @@ total_size = 0
 try:
     for line in sys.stdin:
         line_split = line.split()
-        status_code = line_split[7]
-        file_size = line_split[8]
-        if status_code in status_available:
-            if status_code in my_dict:
-                my_dict[status_code].extend([file_size])
+
+        try:
+            status_code = line_split[7]
+        except IndexError:
+            pass
+        
+        try:
+            file_size = line_split[8]
+            if status_code in status_available:
+                if status_code in my_dict:
+                    my_dict[status_code].extend([file_size])
+                else:
+                    my_dict[status_code] = [file_size]
             else:
-                my_dict[status_code] = [file_size]
-        else:
-            break
+                break
+        except IndexError:
+            pass
+
         total_size += int(file_size)
         i += 1
         if i == 10:
