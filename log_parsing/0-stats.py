@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from sys import stdin
+import sys
 
 
 """Script to get stats from a request"""
@@ -11,7 +11,7 @@ total_size = 0
 
 
 try:
-    for line in stdin:
+    for line in sys.stdin:
         line_split = line.split()
         status_code = line_split[7]
         file_size = line_split[8]
