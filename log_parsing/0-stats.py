@@ -40,7 +40,7 @@ try:
 
         if i == 10:
             print_stats(total_size, my_dict)
-            i = 1
+            i = 0
 
     print_stats(total_size, my_dict)
 
