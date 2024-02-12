@@ -25,24 +25,24 @@ try:
         total_size += int(file_size)
         i += 1
         if i == 10:
-            print(f'File size: {total_size}')
+            print('File size: {}'.format(total_size))
             my_dict = sorted(my_dict.items())
             my_dict = dict(my_dict)
             for key in my_dict:
-                print(f'{key}: {len(my_dict[key])}')   
+                print('{}: {}'.format(key, len(my_dict[key])))   
             i = 0
 
-    print(f'File size: {total_size}')
+    print('File size: {}'.format(total_size))
     my_dict = sorted(my_dict.items())
     my_dict = dict(my_dict)
     for key in my_dict:
-        print(f'{key}: {len(my_dict[key])}')
+        print('{}: {}'.format(key, len(my_dict[key])))
         i = 0
 
 except KeyboardInterrupt:
-    print(f'File size: {total_size}')
+    print('File size: {}'.format(total_size))
     my_dict = sorted(my_dict.items())
     my_dict = dict(my_dict)
     for key in my_dict:
-        print(f'{key}: {len(my_dict[key])}')
+        print('{}: {}'.format(key, len(my_dict[key])))
     raise
