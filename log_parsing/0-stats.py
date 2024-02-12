@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""comments"""
 from sys import stdin
+"""
+comments
+"""
 
 i = 0
 my_dict = {}
