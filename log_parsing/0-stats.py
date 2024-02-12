@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""comments"""
 from sys import stdin
 
 i = 0
