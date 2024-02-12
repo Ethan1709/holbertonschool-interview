@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 from sys import stdin
-"""
-comments
-"""
+
+"""Script to get stats from a request"""
 
 i = 0
 my_dict = {}
