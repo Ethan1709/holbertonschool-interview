@@ -3,6 +3,7 @@
 0_rain
 """
 
+
 def rain(walls):
     if not walls:
         return 0
@@ -20,4 +21,3 @@ def rain(walls):
                     new.append(water)
                     break
     return sum(new)
-        
